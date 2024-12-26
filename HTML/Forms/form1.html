@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+        form{
+            border: 2px ;
+            width: 55%;
+            text-align: right;
+        }
+/*        
+       label,input{
+        
+        display: table-cell;
+       } */
+            
+        
+    </style>
+
+    <p>Please complete the form below to download your free guide</p>
+    <form action="" >
+        <p>Fields marked with a * are required</p>
+
+        <label for="firstname">First Name*:</label>
+        <input type="text" name="firstname" id="" required placeholder="Enter your First Name"><br><br>
+
+        <label for="lastname">Last Name*:</label>
+        <input type="text" name="lastname" id="" required placeholder="Enter your Last Name"><br><br>
+
+        <label for="email">Email*:</label>
+        <input type="email" name="email" id="" required placeholder="email*"><br><br>
+
+        <label for="cnfemail">Confirm Email*:</label>
+        <input type="email" name="cnfemail" id="" required placeholder="confirm email*"><br><br>
+
+        <label for="company">Company*:</label>
+        <input type="text" name="company" id="" required placeholder=" "><br><br>
+
+        <label for="role">Job title</label>
+        <input type="text" name="role"><br><br>
+
+        <label for="country">Country*:</label>
+        <select name="country" id="" style="width: 185px;" >
+            <option value="">--choose--</option>
+            <option value="india">India</option>
+            <option value="USA">USA</option>
+            <option value="China">China</option>
+            <option value="Russia">Russia</option>
+            <option value="UK">UK</option>
+        </select><br><br>
+
+        <button type="submit">Submit your enquiry</button>
+
+
+    </form>
+</body>
+</html>

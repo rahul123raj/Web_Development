@@ -1,0 +1,433 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* nav design starts */
+nav{
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0 ,0, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 70px;
+    position: fixed;
+    z-index: 3;
+}
+
+nav img{
+    width: 250px;
+    height: 120px;
+    /* padding-left: 50px; */
+}
+
+.links{
+    display: inline;
+    width: 27rem;
+}
+
+.links a{
+    margin-right: 50px;
+    color: white;
+    text-decoration: none;
+}
+
+.links a:hover{
+    color: #a138df;
+}
+
+/* nav design ends */
+
+/* banner1 code starts */
+.banner1{
+
+    background: url("../Assets/images/app-link-background.svg") no-repeat center/cover ;
+    
+}
+#text,#text1{
+    font-size: 5em;
+    font-weight: 700;
+}
+
+#text{
+    padding-top: 40vh;
+}
+
+#text1{
+    padding-top: 8vh;
+}
+#text2{
+    font-size: 2em;
+    font-weight: 400;
+}
+
+#text,#text2,#text1{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
+    font-family: "Concert One", sans-serif;
+    
+}
+
+.banner1 button,.btn{
+    background-color: #ff5672;
+    padding: 10px 20px;
+    width:195px;
+    color: white;
+    font-size: 19px;
+    font-weight: 700;
+    border-radius: 9px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.imgapp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+}
+
+.imgapp p{
+    font-weight: 400;
+    color: white;
+}
+
+.imgapp img{
+    margin-left: 20px ;
+    margin-top: 10px;
+}
+/* banner1 code ends */
+
+/* features code start */
+.features{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 90px;
+}
+
+.fearture p{
+    text-wrap: pretty;
+    width: 190px;
+    text-transform: capitalize;
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+/* features code ends */
+
+/* banner2 and banner3 code starts */
+.banner1,.banner2,.banner3{
+    width: 100%;
+    height: 100vh;
+}
+.banner2{
+    background: url("../Assets/images/banner-1\ \(1\).webp") no-repeat center/cover;
+}
+
+.banner3{
+    background: url("../Assets/images/banner-2\ \(1\).webp") no-repeat center/cover;
+}
+/* banner2 and banner3 code endss */
+
+
+
+/* footer design starts */
+#h1{
+    text-align: center;
+    font-size: 55px;
+    font-weight: 700;
+    color: #424242;
+    margin: 70px 0px;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    width: 100%;
+    font-size: 20px;
+}
+
+.footer1-inner, .footer2-inner{
+    width: 250px;
+    height: 270px;
+    margin-top: 50px;
+}
+.footer1 p{
+    display: inline;
+ } 
+
+.grow{
+    flex-grow: .3;
+}
+
+.h22{
+    margin-bottom: 40px;
+    color: #424242;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+#in{
+    display: inline;
+    margin-left: 5px;
+    padding: 10px 10px;
+}
+
+#inn{
+    font-size: 15px;
+    margin-left: 30px;
+    padding: 10px 10px;
+}
+
+.footer p, .fearture p{
+    font-weight: 400;
+    font-size: 20px;
+    color: #424242;
+    line-height: 2em;
+}
+
+li{
+    padding: 10px 5px;
+    cursor: pointer;
+    color: #424242;
+}
+
+.fa-brands{
+    color: #ff5672;
+    margin-left: 20px;
+    font-size: 45px;
+}
+
+.footer1-inner input{
+    margin-top: 40px;
+    width: 300px;
+    height: 50px;
+    padding: 20px 70px 20px 20px;
+    font-size: 17px;
+    outline: none;
+    border-radius: 50px;
+}
+
+.footer3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+}
+
+ #img1{
+    margin-right: 50px;
+    height: 40px;
+}
+
+#img2{
+    width: 60px;
+    height: 50px;
+}
+
+.copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #c77bf4 0%, #ff5672 100% );
+    color: white;
+    font-size: 15px;
+    height: 50px;
+
+}
+/* footer design endss */
+
+/* Francise code starts */
+video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    /* position: fixed; */
+    z-index: -1;
+}
+
+.head-div{
+    z-index: 1;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0 0 0 /25%);
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    
+}
+
+#h11{
+    text-align: center;
+    font-size: 34px;
+    margin: 30px;
+}
+.moto-in{
+    margin: auto;
+    width: 500px;
+}
+.moto p{
+    text-align: center;
+    font-size: 21px;
+    margin: 20px;
+}
+
+hr{
+    width: 80%;
+    color: #a138df;
+    margin: auto;
+    border: 1px solid;
+}
+
+.benefit1, .benefit2{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0; 
+}
+
+.bene{
+    width: 300px;
+    line-height: 2em;
+    text-align: center;
+}
+
+.apply p{
+    text-align: center;
+}
+ .applygrid{
+    display: grid;
+    column-gap: 20px;
+    justify-items: center;
+ }
+ .applygrid div:first-child{
+    margin-top: 50px;
+    height: 520px;
+    width: 100%;
+    background: url("../Assets/images/apply-grid.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+ }
+/* Francise code endss */
+/* about code starts */
+
+.banner1about{
+    background: url("../Assets/images/banner (1).webp") no-repeat center/cover;
+}
+
+.foodstripe{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.text-img,.stripe,.locations{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.stripe img{
+    height: 110px;
+    width: 350px;
+}
+
+.text-img p,.stripe p,.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 500px;
+    font-size: 21px;
+    color: #424242;
+    flex-direction: column;
+}
+
+.text-img img,.location{
+    width: 500px;
+    height: 330px;
+}
+
+.p-location{
+    font-size: 21px;
+    color: #424242;
+}
+
+.p-location b{
+    margin-right: 20px;
+}
+/* about code endss */
+
+/* menu code starts */
+.menuimg{
+    width: 100%;
+    height: 700px;
+}
+
+.menus{
+    background: url("../Assets/images/banner.webp") no-repeat center/cover;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content:end;
+    flex-direction: column;
+
+}
+
+.menus p{
+    font-size: 40px;
+    color: white;
+    font-family: "Concert One", sans-serif;
+}
+
+.menus p+img{
+    width: 30px;
+    height: 30px;
+}
+
+.menues{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    height: 300px;
+}
+
+.menues div{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-between;
+    height: 250px;
+}
+
+.menues div:hover{
+    filter: brightness(70%);
+    
+}
+
+img[alt="png"]{
+    width: 100px;
+    height: 140px;
+}
+/* menu code ends */
+
+

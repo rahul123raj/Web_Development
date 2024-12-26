@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         form{
+            margin: auto;
+            background-color: rgba(221, 109, 5, 0.89);
+            width: 20%;
+            display: block;
+        } 
+
+        .form-field{
+            padding: 10px;
+            margin: auto 10px;
+            background-color: rgb(235, 170, 30);
+            
+        }
+
+        .form-field input{
+            padding: 5px 10px;
+            border-radius: 3px;
+            border: none;
+            margin: auto 5%;
+        }
+
+        button{
+            background-color: black;
+            color: aliceblue;
+            font-size: large;
+            margin: 5%;
+        }
+
+        .err-msg{
+            color: red;
+            font-size: small;
+            padding: 0px;
+            /* display: none; */
+            visibility:hidden;
+        }
+
+    </style>
+</head>
+<body>
+
+    <form action="" onsubmit="return validation(event)">
+        <div class="form-field">
+            <small id="username-err" class="err-msg">username is mandatory</small><br>
+            <small id="invalid-username" class="err-msg">space not allowed</small>
+
+            <input type="text" name="username" id="" placeholder="username"><sup style="color: red; font-size: large;">*</sup>
+            
+        </div>
+        <div class="form-field">
+            <small id="password-err" class="err-msg">password is mandatory</small><br>
+            <small id="invalid-password" class="err-msg">space not allowed</small>
+
+            <input type="password" name="pass" id="" placeholder="password"><sup style="color: red; font-size: large;">*</sup>
+        </div>
+        <div class="form-field" >
+            <button class="login-btn">Login</button>
+        </div>
+    </form>
+
+
+    <script>
+
+        function validation(e){
+            let username_err = document.getElementById('username-err')
+            let password_err = document.getElementById('password-err')
+            let invalid_username = document.getElementById('invalid-username')
+            let invalid_password = document.getElementById('invalid-password')
+
+            let username = e.target.username.value
+            let password = e.target.pass.value
+            let u = username.trim()
+            let p = password.trim()
+
+            let space = (s)=>{
+                for(let i=0;i<s.length;i++){
+                    if(s[i] == " "){
+                        return true
+                    }
+                }
+                    return false
+            }
+
+            if( username == "" && password == ""   ){
+                username_err.style.visibility = "visible"
+                password_err.style.visibility = "visible"
+                // invalid_password.style.visibility = "visible"
+                return false
+
+            } 
+            else if(space(username) && space(password)){
+                invalid_password.style.visibility = "visible"
+                invalid_username.style.visibility = "visible"
+                return false   
+            }
+            else if(space(username)){
+                invalid_username.style.visibility = "visible"
+                return false  
+            }
+            else if(space(password)){
+                invalid_password.style.visibility = "visible"
+                return false
+            }
+            // else if(u && p){
+            //     invalid_password.style.visibility = "visible"
+            //     invalid_username.style.visibility = "visible"
+            //     return false
+            // }
+            // else if(u && p == false){
+            //     invalid_username.style.visibility = "visible"
+            //     return false
+            // }
+            // else if( u == false && p){
+            //     invalid_password.style.visibility = "visible"
+            //     return false
+            // }
+            else if(  username && password == "" ){
+                password_err.style.visibility = "visible"
+                return false
+
+            }
+            else if( username == "" && password ){
+                username_err.style.visibility = "visible"
+                return false 
+        }
+
+    }
+
+    </script>
+</body>
+</html>

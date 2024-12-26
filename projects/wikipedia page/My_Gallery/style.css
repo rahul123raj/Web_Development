@@ -1,0 +1,89 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.main{
+    background-color: rgba(0, 140, 255, 0.7);
+}
+
+.wrapper{
+    padding-bottom: 35px;
+    /* display: flex;
+    flex-wrap: wrap; */
+
+}
+
+h1{
+    text-align: center;
+    font-size: xxx-large;
+    letter-spacing: 8px;
+    word-spacing: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    color: darkblue;
+    text-shadow: 0px 0px 9px darkred;
+}
+
+
+.row{
+    display: flex;
+
+ align-content: space-evenly;
+ justify-content: space-evenly;
+
+ margin: 35px 0px 0px 0px;
+}
+
+
+
+.image{
+  width: 300px;
+  height: 250px;
+border-radius: 5px;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+}
+
+.img1{
+    background: url("./birds-6305827_1920.jpg") no-repeat center/cover;
+}
+
+.img2{
+    background: url("./chameleon-6307349_1920.jpg") no-repeat center/cover;
+}
+
+.img3{
+    background: url("./grasshopper-2655486_1920.jpg") no-repeat center/cover;
+}
+
+.img4{
+    background: url("./horses-1414889_1920.jpg") no-repeat center/cover;
+}
+
+.img5{
+    background: url("./owl-50267_1920.jpg") no-repeat center/cover;
+}
+
+.img6{
+    background: url("./owl-517497_1920.jpg") no-repeat center/cover;
+}
+
+.img7{
+    background: url("./rhinoceros-1834413_1920.jpg") no-repeat center/cover;
+}
+
+.img8{
+    background: url("./snake-8282641_1920.jpg") no-repeat center/cover;
+}
+
+.img9{
+    background: url("./tiger-2535888_1920.jpg") no-repeat center/cover;
+}
+
+.image:hover{
+    transform: scale(1.5,1.5);
+    transition: .8s;
+    border-radius: 20px;
+}

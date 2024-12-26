@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <style>
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .inner{
+            display: grid;
+            width: 360px;
+            height: 360px;
+            grid-template-columns: auto auto auto;
+            background-color: aquamarine;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 700px;
+        }
+
+        .btn{
+            width: 120px;
+            height: 120px;
+            font-size: 6rem;
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="inner">
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+        </div>
+    </div>
+
+    <script>
+        let btn = document.querySelectorAll('.btn')
+        console.log(btn)
+     
+       let winpattern = [
+            [0,1,2],
+            [0,3,6],
+            [0,4,5],
+            [3,4,5],
+            [6,7,8],
+            [1,4,7],
+            [2,5,8],
+            [2,4,6]
+        ]
+
+        let turn0 = true
+
+        btn.forEach((btn,index)=>{
+            btn.addEventListener("click",()=>{
+
+                // console.log(index,btn)
+                if(turn0){
+                    btn.innerText = "o"
+                    turn0 = false
+                }else {
+                    btn.innerText ="x"
+                    turn0 = true
+                }
+                disables()
+                 checkWinner()
+            })
+        })
+        
+        let disables = ()=>{
+            
+        }
+        let checkWinner = ()=>{
+            for(let pattern of winpattern){
+                let pos1 = btn[pattern[0]].innerText
+                let pos2 = btn[pattern[1]].innerText
+                let pos3 = btn[pattern[2]].innerText
+
+                // console.log(pos1)
+
+                if(pos1 != "" && pos2 != "" && pos3 != ""){
+                    if(pos1 === pos2 && pos2 === pos3){
+                        console.log("winner winner winner")
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .calci{
+            background-color: black;
+            width: 250px;
+            /* height: 300px; */
+            padding: 5px;
+            border-radius: 5px;
+            /* margin-top: 30px; */
+            margin: 10% ;
+        }
+
+        .calci-display{
+            text-align: center;
+            padding: 5px;
+        }
+
+        .calci-display input{
+            width: 100%;
+            padding: 10px 20px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            background-color: white;
+        }
+
+        button{
+            height: 30px;
+            font-size: large;
+            cursor: pointer;
+        }
+
+        button:hover{
+            filter: brightness(70%);
+        }
+
+        .calci-buttons{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 5px;
+        }
+
+        #equal-btn{
+            background-color: blueviolet;
+        }
+        
+        
+    </style>
+</head>
+<body>
+
+    <div class="calci">
+        <div class="calci-inner">
+            <div class="calci-display">
+                <input type="text" placeholder="00.0" >
+            </div>
+            <div class="calci-buttons">
+                <button class="btn">9</button>
+                <button class="btn">8</button>
+                <button class="btn">7</button> 
+                <button class="btn">/</button>
+                <button class="btn">6</button>
+                <button class="btn">5</button>
+                <button class="btn">4</button>
+                <button class="btn">*</button>
+                <button class="btn">3</button>
+                <button class="btn">2</button>
+                <button class="btn">1</button>
+                <button class="btn">+</button>
+                <button class="btn">0</button>
+                <button class="btn">00</button>
+                
+                <button id="equal-btn">=</button>
+                <button>-</button>
+                <button>.</button>
+                <button id="AC-btn">AC</button>
+                <button id="C-btn">C</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let buttons = document.querySelectorAll(".btn")
+        let display = document.querySelector('input')
+        let equal_btn = document.getElementById("equal-btn")
+        let ac_btn = document.getElementById("AC-btn")
+        let c_btn = document.getElementById("C-btn")
+
+        for(let i = 0; i< buttons.length; i++){
+            buttons[i].addEventListener("click",(e)=>{
+                let btn_value = e.target.innerText
+                display.value += btn_value
+            })
+        }
+
+    
+
+        equal_btn.addEventListener("click", ()=>{
+            let display_result = eval(display.value);
+            console.log(display_result)
+            display.value = display_result
+        })
+
+        ac_btn.addEventListener("click",()=>{
+            display.value = ""
+        })
+
+        c_btn.addEventListener("click",()=>{
+            let res = display.value
+            display.value = res.slice(0,res.length-1)
+        })
+    </script>
+</body>
+</html>

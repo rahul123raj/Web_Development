@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Student Registration Form</h1>
+    <p style="text-align: center;">Fill in this form to register</p>
+    <form style="width: 300px; margin: auto;">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" placeholder="Enter your first name"><br><br>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" placeholder="Enter your last name"><br><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your e-mail"><br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" placeholder="dd-mm-yyyy"><br><br>
+
+        <label for="username">Set Username:</label>
+        <input type="text" id="username" name="username" placeholder="Set Username"><br><br>
+
+        <label for="password">Set Password:</label>
+        <input type="password" id="password" name="password" placeholder="Set password"><br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label><br>
+        <input type="radio" id="others" name="gender" value="Others">
+        <label for="others">Others</label><br><br>
+
+        <label for="course">Course:</label>
+        <select id="course" name="course">
+            <option value="Course" disabled selected>Course</option>
+            <option value="course1">Course 1</option>
+            <option value="course2">Course 2</option>
+            <option value="course3">Course 3</option>
+        </select><br><br>
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

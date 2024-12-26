@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="h1">Test</h1>
+    <button id="btn">submit</button>
+    <script>
+        let x = document.getElementById('h1')
+        let y = document.getElementById('btn')
+
+        // console.log(x)
+        // console.log(y)
+
+    //    let fun = (e)=>{
+    //     console.log(x.e)
+    //    }
+
+    //    fun(Event);
+
+            y.addEventListener("click",(e)=>{
+                console.log(e)
+                console.log(e.target.innerText)
+                console.log(e.target.value)
+                    // x.style.cssText="background-color : red"
+                    x.style.backgroundColor = "red"
+
+            // console.log(x.outerHTML)
+                    // console.log(e)
+            })
+    </script>
+</body>
+</html>

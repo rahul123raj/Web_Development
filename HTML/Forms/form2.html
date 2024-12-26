@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Survey Form</h1>
+    <p style="text-align: center;">Let us know how we can improve our service</p>
+    <form style="width: 300px; margin: auto;">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Age"><br><br>
+
+        <label for="phone">Handphone:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Phone Number"><br><br>
+
+        <label for="first-time">First time playing Escape Room?</label>
+        <select id="first-time" name="first-time">
+            <option value="" disabled selected>Select an option</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br><br>
+
+        <label>Which game you played?</label><br>
+        <input type="checkbox" name="game" value="Exodus"> Exodus<br>
+        <input type="checkbox" name="game" value="Alcatraz"> Alcatraz<br>
+        <input type="checkbox" name="game" value="Aokigahara"> Aokigahara<br>
+        <input type="checkbox" name="game" value="Mausoleum"> Mausoleum<br>
+        <input type="checkbox" name="game" value="Castiglione"> Castiglione<br><br>
+    </form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        .container{
+            background-color: lightgreen;
+        }
+
+        ul li{
+            background-color: aqua;
+        }
+
+        
+
+
+    </style>
+</head>
+<body>
+    <input type="text" id="input" placeholder="Add your task">
+    <button class="add">Add</button>
+    <ul class="list">
+
+    </ul>
+    <script>
+        let add = document.querySelector('.add')
+        // let input = document.querySelector('#input')
+        let list = document.querySelector('.list')
+
+        add.addEventListener("click",()=>{
+         let task = input.value
+        
+         let li = document.createElement('li')
+         li.innerText = task
+         list.appendChild(li)
+
+         let del = document.createElement('button')
+         del.innerText = "X"
+         li.appendChild(del)
+
+         del.addEventListener("click",()=>{
+            li.remove()
+         })
+            
+        })
+
+        
+    </script>
+</body>
+</html>

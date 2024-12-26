@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 255px;
+            background-color: rebeccapurple;
+        }
+
+        .container input{
+            width: 100%;
+            height: 60px;
+        }
+
+        .btn{
+            width: 50px;
+            background-color: azure;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <input type="text" placeholder="00.0">
+        <div class="inner">
+            <button class="btn" >0</button>
+            <button class="btn" >1</button>
+            <button class="btn" >2</button>
+            <button class="btn" >3</button>
+            <button class="btn" >4</button>
+            <button class="btn" >5</button>
+            <button class="btn" >6</button>
+            <button class="btn" >7</button>
+            <button class="btn" >8</button>
+            <button class="btn" >9</button>
+            <button class="btn" >.</button>
+            <button class="btn" >+</button>
+            <button class="btn" >-</button>
+            <button class="btn" >*</button>
+            <button class="btn" >/</button>
+            <button id="equals" >=</button>
+            <button id="AC">AC</button>
+            <button id="c">C</button>
+
+        </div>
+        <button id="test">test</button>
+    </div>
+    <script>
+        let btn = document.querySelectorAll(".btn")
+        let display = document.querySelector("input")
+        let test = document.querySelector("#test")
+
+        // test.addEventListener("click",(e)=>{
+        //     let display_value = display.value
+        //     console.log(display_value)
+        // })
+
+        for(let i=0;i<btn.length;i++){
+            btn[i].addEventListener("click",()=>{
+                 display.value+=btn[i].innerText
+            })
+        }
+         
+        let equals =document.querySelector("#equals")
+
+        equals.addEventListener("click",()=>{
+            // console.log(display.value)
+            let res = eval(display.value)
+            display.value = res
+        })
+
+        let AC = document.querySelector("#AC")
+
+        AC.addEventListener("click",()=>{
+            display.value = ""
+        })
+
+        let c = document.querySelector("#c")
+        c.addEventListener("click",()=>{
+            let res = display.value
+            // display.value = display.value.slice(0,display.value.length-1)
+            
+        })
+
+    </script>
+</body>
+</html>

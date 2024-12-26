@@ -1,0 +1,166 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* navbar Design */
+nav{
+    background-color: rgb(109, 114, 114);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.logo img{
+    width: 100px;
+    height: 80px;
+    border: 1px solid burlywood;
+    border-radius: 70%;
+    box-shadow: 0px 0px 9px brown;
+}
+
+.search input{
+    background-color: lightcyan;
+    border: none;
+    border-bottom: 3px solid black;
+    outline: none;
+    width: 24rem;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 50px;
+}
+
+::placeholder{
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+
+.navlinks a{
+    text-decoration: none;
+    color: white;
+    text-shadow: 0px 0px 2px black;
+    margin-left: 20px;
+}
+
+.navlinks a:hover{
+    color: black;
+}
+/* navbar Designs end*/
+
+/* Header Designs Start*/
+.carousel-item img{
+    height: 80vh;
+    width: 100wh;
+}
+
+/* Header Designs end */
+
+/* card-section starts */
+.card-section{
+    background-color: yellowgreen;
+    padding: 10px 0px;
+}
+/* card-section ends */
+
+/* footer design */
+footer{
+    padding: 40px 0px;
+    background-color: lightgray;
+}
+
+.footer-inner{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 30px;
+}
+
+.footer-links a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: small;
+}
+
+.footer-links a:hover{
+    text-decoration: underline blue;
+    color: blue;
+}
+
+.socialmedia-pages{
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 40px;
+}
+
+#whatsapp{
+    color: #075E54;
+}
+
+#insta{
+    color: rgb(240, 50, 82);
+}
+
+#x{
+    color: #1DA1F2;
+}
+
+.copyright {
+    
+    text-align: center;
+    font-size: small;
+    color: black;
+    border-top: 1px solid black;
+    padding-top: 30px;
+}
+
+/* contact page */
+.form-wrapper{
+    background-color: yellow;
+    padding: 30px 10px;
+
+}
+
+.contact-form{
+    background-color: white;
+    width: 60vh;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px black;
+    padding: 20px;
+    margin: auto;
+
+}
+
+.input-div input,textarea{
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    margin-top: 10px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.contact-form button[type = "submit"]{
+    background-color: green;
+    padding: 10px 10px;
+    border: none;
+    color: white;
+    margin-top: 10px;
+}
+
+.contact-form button[type = "reset"]{
+    background-color: red;
+    padding: 10px 10px;
+    border: none;
+    color: white;
+    margin-top: 10px;
+}
+
+.contact-btns{
+    display: flex;
+    justify-content: space-around;
+}
+    

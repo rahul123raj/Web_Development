@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            background-color: yellow;
+            width: 250px;
+            height: 100px;
+            margin: auto;
+        }
+
+        .form-field input{
+            padding: 5px;
+            margin-left: 10px;
+        }
+
+        .form-field button{
+            background-color: black;
+            font-size: large;
+            padding: 5px;
+            color: white;
+            margin-left: 10px;
+        }
+
+        .form-field{
+            margin: 10px 10px;
+        }
+
+        .err-msg{
+            margin-left: 10px;
+            color: red;
+            visibility: hidden;
+            /* display: none; */
+        }
+    </style>
+</head>
+<body>
+
+    <form action="" onsubmit="return validation(event)">
+        <div class="form-field">
+            <small class="err-msg">Enter valid mobile number</small>
+            <input type="tel" id="mob" placeholder="Enter your mobile number">
+        </div>
+        <div class="form-field">
+            <button>submit</button>
+        </div>
+    </form>
+
+    <script>
+        let mob_no = document.getElementById('mob')
+
+        let err_msg = document.querySelector('.err-msg')
+
+        function validation(e){
+            
+            let mob = e.target.mob.value
+            // console.log(mob)
+            let regEx = /(^[6-9][0-9]{9}$)/
+            if(regEx.test(mob)){
+                alert("mobile no is valid")
+                // console.log("mobile no is valid")
+                // e.preventDefault()
+                return true
+            }
+            else{
+                err_msg.style.visibility = "visible"
+                // err_msg.style.display = "inline"
+
+                return false
+            }
+
+        }
+
+    
+
+
+
+
+    </script>
+</body>
+</html>

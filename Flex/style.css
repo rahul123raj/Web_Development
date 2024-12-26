@@ -1,0 +1,38 @@
+.main{
+    height: 50px;
+    width: 50px;
+    
+}
+
+.flex-container{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  /* align-content: space-between; */
+  justify-content: space-evenly;
+  background-color: rgb(151, 151, 11);
+  height: 500px;
+  width: 200px;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.bgcolor1{
+    background-color: aqua;
+}
+
+.bgcolor2{
+    background-color: brown;
+}
+
+.bgcolor3{
+    background-color: yellow;
+}
+
+.bgcolor4{
+    background-color: violet;
+}
+
+.bgcolor5{
+    background-color: tomato;
+}

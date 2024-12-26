@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .dark-btn{
+            background-color: black;
+            color: white;
+            border-radius: 4px;
+            border: none;
+            text-transform: capitalize;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+        .light-mode{
+            background-color: white;
+            color: black;
+        }
+        .dark-mode{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <button class="dark-btn">dark mode</button>
+    <h1>jspider</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum deserunt quasi rerum esse a maxime illum explicabo iusto maiores, earum, quae, ipsum possimus! Rerum quidem debitis ad reprehenderit incidunt officiis.
+    Qui, perferendis explicabo incidunt provident eaque fugit voluptatibus esse nulla consequuntur repellendus odio, libero vitae quasi ea ab sunt! Sed eum hic maiores porro quos doloribus laudantium asperiores veritatis! Labore?
+    Veniam voluptas dicta quas iure molestias amet quae reiciendis? Iure adipisci dolorum officia laborum debitis laudantium vitae culpa? Architecto, dignissimos exercitationem. Harum quidem est blanditiis aliquid, quia quas natus amet.</p>
+
+    <button>Enroll</button>
+
+    <script>
+        let dark_btn = document.querySelector(".dark-btn")
+        // console.log("dark button")
+        let body = document.querySelector("body")
+
+        dark_btn.addEventListener("click", ()=>{
+            body.classList.toggle("dark-mode")
+
+            if(dark_btn.innerText === "Dark Mode"){
+                dark_btn.innerText = "Light Mode"
+                dark_btn.classList.remove("dark-mode")
+                dark_btn.classList.add("light-mode")
+            } else {
+                dark_btn.innerText = "Dark Mode"
+                dark_btn.classList.remove("light-mode")
+                dark_btn.classList.add("dark-mode")
+            }
+        })
+
+        // classList is a property of DOM elements used to add or rename or toggle the css class
+        // innerText is a property of DOM elements which will tepesent the text written inside a tag
+    </script>
+</body>
+</html>

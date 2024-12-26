@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+input, button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  width: 300px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+}
+
+.completed .task-text {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.completed .toggle-complete {
+  background-color: green;
+  color: white;
+}
+
+.toggle-complete {
+  margin-right: 10px;
+}
+
+button {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: none;
+  background-color: #ccc;
+  border-radius: 3px;
+  color: white;
+}
+
+button.delete-button {
+  background-color: red;
+}
+
+button.toggle-complete {
+  background-color: green;
+}
+
+button.completed {
+  background-color: gray;
+}
+
+    </style>
+</head>
+<body>
+    <h1>To-Do List</h1>
+  <input type="text" id="new-task" placeholder="Add a new task">
+  <button id="add-task">Add Task</button>
+  <ul id="tasks">
+    <!-- Tasks will appear here -->
+  </ul>
+
+  <script>
+    document.getElementById('add-task').addEventListener('click', addTask);
+
+function addTask() {
+  const taskInput = document.getElementById('new-task');
+  const taskText = taskInput.value.trim();
+  
+  if (taskText === '') {
+    alert('Please enter a task.');
+    return;
+  }
+  
+  // Use innerHTML to insert the task without using createElement
+  const taskList = document.getElementById('tasks');
+  taskList.innerHTML += `
+    <li>
+      <span class="task-text">${taskText}</span>
+      <button class="toggle-complete" onclick="toggleComplete(this)">✔️</button>
+      <button class="delete-button" onclick="removeTask(this)">Delete</button>
+    </li>`;
+  
+  // Clear the input field
+  taskInput.value = '';
+}
+
+function removeTask(button) {
+  const taskItem = button.parentNode;
+  taskItem.parentNode.removeChild(taskItem);
+}
+
+function toggleComplete(button) {
+  const taskItem = button.parentNode;
+  taskItem.classList.toggle('completed');
+
+  if (taskItem.classList.contains('completed')) {
+    button.textContent = '❌'; // Change to untick mark when completed
+  } else {
+    button.textContent = '✔️'; // Change back to tick mark when uncompleted
+  }
+}
+
+  </script>
+</body>
+</html>

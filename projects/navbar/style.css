@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+}
+
+nav{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    min-height: auto;
+    flex-wrap: wrap;
+
+}
+
+.navlinks a{
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    
+
+}
+
+.logo img{
+    width: 100px;
+    height: 70px;
+}
+
+.navlinks{
+    
+    /* background-color: aliceblue; */
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+
+    
+}
+
+.navlinks a:hover{
+    color: darkred;
+    text-decoration:underline;
+    text-shadow: 0px 0px 2px white;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .clock{
+        color: green;
+        font-size: 5rem;
+        font-family: monospace;
+        font-weight: bolder;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="clock">00:00:00</div>
+    </div>
+    <script>
+        function clock(){
+            let time = new Date()
+            let hrs = time.getHours().toString().padStart(2,"0")
+            let min = time.getMinutes().toString().padStart(2,"0")
+            let sec = time.getSeconds().toString().padStart(2,"0")
+
+            let clocks = document.getElementsByClassName('clock')
+            // console.log(clocks[0].innerText)
+            clocks[0].innerText = `${hrs} : ${min} : ${sec}`
+            
+        }
+        setInterval(clock, 1000);
+        clock()
+    </script>
+</body>
+</html>

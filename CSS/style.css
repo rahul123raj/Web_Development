@@ -1,0 +1,23 @@
+
+
+p{
+    
+
+    width: 400px;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow:visible;
+    
+}
+#circle{
+    /* background:linear-gradient(0deg,orange,white,green); */
+   background-image: url(./IMG_20211002_140519.jpg );
+   background-repeat: no-repeat;
+   background-size:cover;
+    width: 200px;
+
+    height: 200px;
+    border-radius: 10%;
+
+
+}

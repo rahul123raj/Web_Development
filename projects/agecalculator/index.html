@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            margin: 80px  auto ;
+            height: 40vh;
+            width: 30vw;
+            background-color: cadetblue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 10px;
+        }
+
+        #dob{
+            padding: 15px;
+            font-size: larger;
+            border: none;
+            border-bottom: 3px solid black;
+            border-radius: 7px;
+            background-color: lightcyan;
+        }
+
+        #submit{
+            padding: 5px;
+            background-color: black;
+            color: white;
+            font-size: large;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #age{
+            font-size: 30px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            visibility: hidden;
+            /* visibility: visible; */
+        }
+
+        h1{
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Know your Age!</h1>
+        <input id="dob" type="number" placeholder="Enter your Date of Birth">
+    <button id="submit">submit</button>
+    <p id="age">age</p>
+    </div>
+    
+    <script>
+        let dob = document.getElementById('dob')
+        let btn = document.getElementById('submit')
+        let age = document.getElementById('age')
+
+        btn.addEventListener("click",()=>{
+            let yearobj = new Date()
+            let year = dob.value
+            // console.log(year)
+            let yourage = yearobj.getFullYear()-year
+            // console.log(yourage)
+
+            if(year >= yearobj.getFullYear()){
+                age.innerText = 'Error, invalid year'
+                console.log("invalid")
+                age.style.visibility = "visible"
+
+                dob.value=""
+            } else{
+                age.innerText = `Your age is ${yourage} year,born on ${year} `
+                age.style.visibility = "visible"
+                dob.value=""
+            }
+        })
+    </script>
+</body>
+</html>

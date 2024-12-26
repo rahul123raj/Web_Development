@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: tomato;
+            padding: 10px;
+        }
+
+        ul{
+            background-color: beige;
+            margin: 0%;
+            width: 15%;
+            display: none;
+        }
+
+        ul li{
+            border-bottom: 1px solid black;
+            list-style-type: none;
+        }
+
+        a{
+            color: green;
+            text-transform: capitalize;
+        }
+
+        form{
+            margin: auto;
+            background-color: aqua;
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-field{
+            padding: 10px;
+            margin: auto;
+        }
+
+        .form-field input{
+            padding: 5px 10px;
+            border-radius: 3px;
+            border: none;
+        }
+
+        .err-msg{
+            color: red;
+            font-size: small;
+            padding: 0px;
+            /* display: none; */
+            visibility:hidden;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <button >Menu</button>
+    <ul>
+        <li><a href="../Bookmyshow/index.html" target="_blank"> bookmyshow</a></li>
+        <li><a href="../calculator/" target="_blank">calculator</a></li>
+        <li><a href="../facebook_loginpage/index.html" target="_blank">facebook_loginpage</a></li>
+    </ul>
+
+    <!-- Form Validation -->
+
+    <form action="">
+        <div class="form-field">
+            <small id="username-err" class="err-msg">username is mandatory</small>
+            <input type="text" name="username" id="" placeholder="username"><sup style="color: red; font-size: large;">*</sup>
+            
+        </div>
+        <div class="form-field">
+            <small id="password-err" class="err-msg">password is mandatory</small>
+            <input type="password" name="pass" id="" placeholder="password"><sup style="color: red; font-size: large;">*</sup>
+        </div>
+        <div class="form-field">
+            <button class="login-btn">Login</button>
+        </div>
+    </form>
+
+    <script>
+        let menu_btn = document.querySelector("button")
+        let ul = document.querySelector("ul")
+
+        menu_btn.addEventListener("click",()=>{
+            if(ul.style.display === "block"){
+                ul.style.display = "none"
+            }else{
+                ul.style.display = "block"
+            }
+        })
+
+        // Form Valodation code
+
+        let form = document.querySelector('form')
+        let username_err = document.getElementById('username-err')
+        let password_err = document.getElementById('password-err')
+
+        form.addEventListener("submit",(e)=>{
+            let username = e.target.username.value
+            let password = e.target.pass.value
+
+            if(username == "" && password == ""){
+                username_err.style.visibility = "visible"
+                password_err.style.visibility = "visible"
+            e.preventDefault()
+
+            } 
+            else if(username && password == ""){
+                password_err.style.visibility = "visible"
+            e.preventDefault()
+
+            }
+            else if(username == "" && password){
+                username_err.style.visibility = "visible"
+            e.preventDefault()
+
+            }
+            // else{
+            //     username_err.style.visibility = "hidden"
+            //     password_err.style.visibility = "hidden"
+
+            // }
+
+        })
+    </script>
+</body>
+</html>
